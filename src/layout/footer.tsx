@@ -9,11 +9,11 @@ const Footer = () => {
       fontStyle="normal"
       // fontFamily="Jost"
       lineHeight="23px"
-      bgColor="#4B6587"
+      bgColor=" gray"
       flexDirection="row"
       fontWeight="400px"
       justifyContent="space-between"
-      padding="80px 120px 60px 100px"
+      padding="80px 120px 60px 90px"
     >
       <Box width="360px" gap="12px">
         <Image src="/images/hernalytics-full-logo.svg" alt="hernalytics-logo" />
@@ -40,10 +40,10 @@ const Footer = () => {
         <Text fontWeight="bold">Let's chat!</Text>
         <Text>hernalytics@gmail.com</Text>
         <Text>+234 801 234 5678</Text>
-        <HStack>
+        <HStack gap="30px">
           <Image src="/images/instagram.svg" alt="instagram" />
           <Image src="/images/twitter.svg" alt="twitter" />
-          <Image src="/images/watsapp.svg" alt="whatsapp" />
+          <Image src="/images/whatsapp.svg" alt="whatsapp" />
         </HStack>
       </VStack>
     </Box>

@@ -7,12 +7,12 @@ const Topbar = () => {
       color="#FFFFFF"
       fontSize="14px"
       lineHeight="20px"
-      bgColor=" #1E1E1E"
+      bgColor=" gray"
       fontStyle="normal"
       flexDirection="row"
       alignItems="center"
       //   fontFamily="Jost"
-      padding="42px 122px 42px 48px"
+      padding="42px 122px 42px 90px"
       justifyContent="space-between"
     >
       <Image src="/images/hernalytics-full-logo.svg" alt="hernalytics-logo" />
