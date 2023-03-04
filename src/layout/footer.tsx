@@ -18,7 +18,11 @@ const Footer = () => {
         <Image src="/images/hernalytics-full-logo.svg" alt="hernalytics-logo" />
 
         <Stack paddingTop="12px">
-          <Text height="24px" _hover={{ borderBottom: "1px solid blue" }}>
+          <Text
+            width="90%"
+            height="24px"
+            _hover={{ borderBottom: "1px solid blue" }}
+          >
             Isale Eko Avenue, Dolphin Estate, Ikoyi, Lagos
           </Text>
           <Text
@@ -38,18 +42,31 @@ const Footer = () => {
         </Stack>
       </Box>
 
-      <Stack display="flex" flexDirection="row" gap="250px">
+      <Stack display="flex" flexDirection="row" gap="220px">
         <VStack alignItems="left" gap="24px">
           <Text
+            height="24px"
             fontWeight="bold"
-            _peerHover={{ borderBottom: "1px solid blue" }}
+            _hover={{ borderBottom: "1px solid blue" }}
           >
             About
           </Text>
-          <Text>Our Story</Text>
-          <Text>Blog</Text>
-          <Text>About Hernalytics</Text>
-          <Text width="50px">Videos</Text>
+          <Text height="24px" _hover={{ borderBottom: "1px solid blue" }}>
+            Our Story
+          </Text>
+          <Text height="24px" _hover={{ borderBottom: "1px solid blue" }}>
+            Blog
+          </Text>
+          <Text height="24px" _hover={{ borderBottom: "1px solid blue" }}>
+            About Hernalytics
+          </Text>
+          <Text
+            height="24px"
+            width="50px"
+            _hover={{ borderBottom: "1px solid blue" }}
+          >
+            Videos
+          </Text>
         </VStack>
 
         <Stack
@@ -60,17 +77,28 @@ const Footer = () => {
         >
           <Text
             width="80px"
+            height="24px"
             fontWeight="bold"
             _hover={{ borderBottom: "1px solid blue" }}
           >
             Support
           </Text>
 
-          <Text _hover={{ borderBottom: "1px solid blue" }}>FAQs </Text>
-          <Text _hover={{ borderBottom: "1px solid blue" }} width="140px">
+          <Text _hover={{ borderBottom: "1px solid blue" }} height="24px">
+            FAQs{" "}
+          </Text>
+          <Text
+            _hover={{ borderBottom: "1px solid blue" }}
+            height="24px"
+            width="140px"
+          >
             Privacy Policy
           </Text>
-          <Text _hover={{ borderBottom: "1px solid blue" }} width="140px">
+          <Text
+            _hover={{ borderBottom: "1px solid blue" }}
+            height="24px"
+            width="120px"
+          >
             Terms of Service
           </Text>
         </Stack>
