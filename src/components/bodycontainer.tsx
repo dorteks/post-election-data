@@ -37,9 +37,9 @@ const BodyContainer = () => {
     <Box
       color="#FFFFFF"
       bgColor="#1F2335"
+      fontFamily="Jost"
       fontStyle="normal"
       padding="0px 90px 30px 90px "
-      // fontFamily="Jost"
     >
       {/* first */}
       <HStack paddingBottom="50px" gap="15px">
@@ -83,6 +83,13 @@ const BodyContainer = () => {
             border="1px solid #252B46"
             placeholder="Election Data"
           />
+          <Image
+            src="/images/arrow-head-down.svg"
+            position="relative"
+            alt="drop-down"
+            left="-45px"
+          />
+
           <Input
             color="#C6C7CB"
             fontSize="14px"
@@ -91,6 +98,12 @@ const BodyContainer = () => {
             borderRadius="6px"
             border="1px solid #252B46"
             placeholder="Presidential"
+          />
+          <Image
+            src="/images/arrow-head-down.svg"
+            position="relative"
+            alt="drop-down"
+            left="-45px"
           />
           <Input
             color="#C6C7CB"
@@ -101,11 +114,21 @@ const BodyContainer = () => {
             border="1px solid #252B46"
             placeholder="2023"
           />
+          <Image
+            src="/images/arrow-head-down.svg"
+            position="relative"
+            alt="drop-down"
+            left="-45px"
+          />
         </HStack>
       </HStack>
 
       {/* third */}
-      <Divider margin="30px 0px 30px 0px" color="#2C2F3F" />
+      <Divider
+        color="#393C4A"
+        border=".5px solid gray"
+        margin="30px 0px 30px 0px"
+      />
 
       <Card
         margin="auto"
@@ -129,24 +152,45 @@ const BodyContainer = () => {
           justifyContent="space-between"
         >
           <VStack>
-            <Image
-              alt="plus"
-              boxSize="38px"
-              border="2px solid inherit"
-              src="/images/plus.svg"
+            <Box
+              boxSize="40px"
+              display="flex"
+              bgColor="#ffffff"
+              alignItems="center"
+              justifyContent="center"
               _hover={{
-                border: "1px solid  #64CCFF",
+                border: "2px solid  #64CCFF",
               }}
-            />
-            <Image
-              alt="minus"
-              width="40px"
-              height="40px"
-              src="/images/minus.svg"
+            >
+              <Image
+                alt="plus"
+                boxSize="15px"
+                src="/images/plus.svg"
+                _hover={{
+                  borderBottom: "2px solid  #64CCFF",
+                }}
+              />
+            </Box>
+
+            <Box
+              boxSize="40px"
+              display="flex"
+              bgColor="#ffffff"
+              alignItems="center"
+              justifyContent="center"
               _hover={{
-                border: "1px solid  #64CCFF",
+                border: "2px solid  #64CCFF",
               }}
-            />
+            >
+              <Image
+                alt="plus"
+                boxSize="15px"
+                src="/images/minus.svg"
+                _hover={{
+                  borderBottom: "2x solid  #64CCFF",
+                }}
+              />
+            </Box>
           </VStack>
           <VStack paddingRight="60px" gap="30px">
             <HStack gap="12px">
@@ -360,10 +404,10 @@ const BodyContainer = () => {
               TOTAL ELECTED MEMBERS
             </Text>
             <Text
+              width="70px"
+              height="30px"
               fontSize="20px"
               fontWeight="bold"
-              height="30px"
-              width="65px"
               borderBottom="1px solid inherit"
               _hover={{
                 borderBottom: "1px solid #64CCFF",
@@ -386,10 +430,10 @@ const BodyContainer = () => {
               <Image src="/images/male.svg" alt="male" />
             </HStack>
             <Text
+              width="60px"
+              height="30px"
               fontSize="20px"
               fontWeight="bold"
-              height="30px"
-              width="55px"
               borderBottom="1px solid inherit"
               _hover={{
                 borderBottom: "1px solid #64CCFF",
@@ -412,10 +456,10 @@ const BodyContainer = () => {
               <Image src="/images/female.svg" alt="female" />
             </HStack>{" "}
             <Text
+              width="60px"
+              height="30px"
               fontSize="20px"
               fontWeight="bold"
-              height="30px"
-              width="55px"
               borderBottom="1px solid inherit"
               _hover={{
                 borderBottom: "1px solid #64CCFF",

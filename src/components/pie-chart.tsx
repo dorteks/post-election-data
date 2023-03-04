@@ -8,7 +8,8 @@ const PieChart = () => {
         height="340px"
         display="flex"
         color="#ffffff"
-        fontSize="14px"
+        fontWeight="300"
+        fontFamily="Jost"
         background="#1B1F30"
         borderRadius=" 13px"
         flexDirection="column"
@@ -22,16 +23,16 @@ const PieChart = () => {
           padding="20px 20px  0px 0px "
         >
           <Image
-            boxSize="25px"
-            marginLeft="60px"
-            marginTop="-5px"
-            src="/images/arrow-diagonal.svg"
             alt="arrow"
+            boxSize="25px"
+            marginTop="-5px"
+            marginLeft="60px"
+            src="/images/arrow-diagonal.svg"
           />
 
-          <Stack width="100px" lineHeight="11px">
+          <Stack width="110px" lineHeight="11px">
             <Text
-              fontSize="10px"
+              fontSize="12px"
               textAlign="center"
               _hover={{
                 borderBottom: "1px solid blue",
@@ -40,9 +41,9 @@ const PieChart = () => {
               REJECTED VOTES
             </Text>
             <Text
-              textAlign="center"
               fontSize="16px"
               fontWeight="bold"
+              textAlign="center"
               _hover={{
                 borderBottom: "1px solid blue",
               }}
@@ -68,8 +69,8 @@ const PieChart = () => {
               }}
             />
             <Image
-              top="31px"
-              left="47px"
+              top="30px"
+              left="52px"
               width="220px"
               height="220px"
               position="absolute"
@@ -128,13 +129,13 @@ const PieChart = () => {
           <Image boxSize="25px" src="/images/arrow.svg" alt="arrow" />
           <Stack
             top="20px"
-            width="100px"
+            width="110px"
             textAlign="left"
             lineHeight="11px"
             marginBottom="56px"
           >
             <Text
-              fontSize="10px"
+              fontSize="12px"
               textAlign="center"
               _hover={{
                 borderBottom: "1px solid blue",
