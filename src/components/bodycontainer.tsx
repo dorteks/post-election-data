@@ -6,23 +6,50 @@ import {
   Input,
   Stack,
   HStack,
+  VStack,
   Divider,
 } from "@chakra-ui/react";
+import Map from "./map";
+import PieChart from "./pie-chart";
+
+type Props = {
+  children: React.ReactNode;
+  fontsize?: any;
+  lineheight?: any;
+};
+
+export const TExt = (props: Props) => {
+  return (
+    <div>
+      <Text
+        fontSize={props.fontsize}
+        lineHeight={props.lineheight}
+        _hover={{ borderBottom: "1px solid blue" }}
+      >
+        {props.children}
+      </Text>
+    </div>
+  );
+};
 
 const BodyContainer = () => {
   return (
     <Box
       color="#FFFFFF"
-      bgColor=" gray"
+      bgColor="#1F2335"
       fontStyle="normal"
       padding="0px 90px 30px 90px "
       // fontFamily="Jost"
     >
       {/* first */}
       <HStack paddingBottom="50px" gap="15px">
-        <Text fontSize="30px" fontWeight="bold">
+        <Text
+          fontSize="30px"
+          fontWeight="bold"
+          _hover={{ borderBottom: "1px solid blue" }}
+        >
           Post Election Data
-        </Text>{" "}
+        </Text>
         <HStack
           fontSize="14px"
           border-radius=" 4px"
@@ -31,9 +58,9 @@ const BodyContainer = () => {
             bgColor: "#242B47",
           }}
         >
-          <Text>PRESIDENTIAL </Text>
-          <Text> / </Text>
-          <Text> 2023</Text>
+          <TExt>PRESIDENTIAL </TExt>
+          <TExt> / </TExt>
+          <TExt> 2023</TExt>
         </HStack>
       </HStack>
 
@@ -43,15 +70,15 @@ const BodyContainer = () => {
         alignContent="center"
         justifyContent="space-between"
       >
-        <Text fontSize="24px" lineHeight="35px">
+        <TExt fontsize="24px" lineheight="35px">
           Presidential Race
-        </Text>
+        </TExt>
         <HStack gap="10px" width="800px" height="45px">
           <Input
             color="#C6C7CB"
             fontSize="14px"
             lineHeight="20px"
-            bgColor="#1B1F30"
+            bgColor="#1C2031"
             borderRadius="6px"
             border="1px solid #252B46"
             placeholder="Election Data"
@@ -60,7 +87,7 @@ const BodyContainer = () => {
             color="#C6C7CB"
             fontSize="14px"
             lineHeight="20px"
-            bgColor="#1B1F30"
+            bgColor="#1C2031"
             borderRadius="6px"
             border="1px solid #252B46"
             placeholder="Presidential"
@@ -69,7 +96,7 @@ const BodyContainer = () => {
             color="#C6C7CB"
             fontSize="14px"
             lineHeight="20px"
-            bgColor="#1B1F30"
+            bgColor="#1C2031"
             borderRadius="6px"
             border="1px solid #252B46"
             placeholder="2023"
@@ -78,368 +105,122 @@ const BodyContainer = () => {
       </HStack>
 
       {/* third */}
-      <Divider margin="30px 0px 30px 0px" color="gray" />
+      <Divider margin="30px 0px 30px 0px" color="#2C2F3F" />
 
       <Card
         margin="auto"
+        color="white"
         display="flex"
         width="1300px"
         height="800px"
         bgColor="#1B1F30"
+        flexDirection="row"
         marginBottom="30px"
         paddingBottom="30px"
         borderRadius=" 13px"
         border=" 1px solid #393C4A"
-        color="white"
       >
-        <Stack display="flex" flexDirection="row">
-          <Image
-            alt="sokoto"
-            paddingTop="30px"
-            marginLeft="280px"
-            src="/images/SOKOTO.svg"
-            boxSize="200px"
-            top="35px"
-            left="16.63%"
-          />
-          <Image
-            top="70px"
-            left="-134px"
-            alt="zamfara"
-            height="172px"
-            width="168px"
-            position="relative"
-            src="/images/ZAMFARA.svg"
-          />
-          <Image
-            top="60px"
-            left="-165px"
-            alt="katsina"
-            height="163px"
-            width="164px"
-            position="relative"
-            src="/images/KATSINA.svg"
-          />
-          <Image
-            top="115px"
-            alt="kano"
-            left="-265px"
-            height="147px"
-            width="145px"
-            position="relative"
-            src="/images/KANO.svg"
-          />
-          <Image
-            top="83px"
-            alt="jigawa"
-            left="-359px"
-            width="187px"
-            height="153px"
-            position="relative"
-            src="/images/JIGAWA.svg"
-          />
-
-          <Image
-            top="39px"
-            alt="borno"
-            left="-294px"
-            width="294px"
-            height="259px"
-            position="relative"
-            src="/images/BORNO.svg"
-          />
-          <Image
-            top="62px"
-            alt="yobe"
-            left="-649px"
-            width="207px"
-            height="195px"
-            position="relative"
-            src="/images/YOBE.svg"
-          />
-        </Stack>
-        <Stack display="flex" flexDirection="row">
-          <Image
-            alt="kebbi"
-            top="-189px"
-            left="221px"
-            width="215px"
-            height="223px"
-            position="relative"
-            src="/images/KEBBI.svg"
-          />
-          <Image
-            left="27px"
-            alt="niger"
-            top="-101px"
-            width="273px"
-            height="295px"
-            position="relative"
-            src="/images/NIGER.svg"
-          />
-          <Image
-            left="-65px"
-            top="-75px"
-            alt="kaduna"
-            height="177px"
-            width="197px"
-            position="relative"
-            src="/images/KADUNA.svg"
-          />
-          <Image
-            top="-147px"
-            left="-78px"
-            alt="bauchi"
-            width="186px"
-            height="217px"
-            position="relative"
-            src="/images/BAUCHI.svg"
-          />
-          <Image
-            top="-63px"
-            alt="gombe"
-            left="-132px"
-            width="122px"
-            height="129px"
-            position="relative"
-            src="/images/GOMBE.svg"
-          />
-        </Stack>
-        <Stack display="flex" flexDirection="row">
-          <Image
-            alt="FCT"
-            top="-221px"
-            left="470px"
-            width="65px"
-            height="68px"
-            position="relative"
-            src="/images/FCT.svg"
-          />
-          <Image
-            top="-229px"
-            left="418px"
-            width="197px"
-            height="113px"
-            alt="nassarawa"
-            position="relative"
-            src="/images/NASARAWA.svg"
-          />
-          <Image
-            top="-299px"
-            left="326px"
-            width="178px"
-            alt="plateau"
-            height="142px"
-            position="relative"
-            src="/images/PLATEAU.svg"
-          />
-          <Image
-            top="-244px"
-            left="194px"
-            alt="taraba"
-            width="216px"
-            height="214px"
-            position="relative"
-            src="/images/TARABA.svg"
-          />
-          <Image
-            top="-341px"
-            left="133px"
-            width="192px"
-            alt="adamawa"
-            height="249px"
-            position="relative"
-            src="/images/ADAMAWA.svg"
-          />
-        </Stack>
-        <Stack display="flex" flexDirection="row">
-          <Image
-            alt="kwara"
-            top="-597px"
-            left="182px"
-            width="249px"
-            height="281px"
-            position="relative"
-            src="/images/KWARA.svg"
-          />
-          <Image
-            alt="kogi"
-            left="81px"
-            top="-444px"
-            width="262px"
-            height="159px"
-            position="relative"
-            src="/images/KOGI.svg"
-          />
-          <Image
-            left="12px"
-            alt="benue"
-            top="-466px"
-            width="177px"
-            height="248px"
-            position="relative"
-            src="/images/BENUE.svg"
-          />
-        </Stack>
-
-        <Stack display="flex" flexDirection="row">
-          <Image
-            alt="oyo"
-            left="176px"
-            top="-747px"
-            width="140px"
-            height="150px"
-            position="relative"
-            src="/images/OYO.svg"
-          />
-
-          <Image
-            alt="osun"
-            top="-717px"
-            left="133px"
-            width="77px"
-            height="151px"
-            position="relative"
-            src="/images/OSUN.svg"
-          />
-          <Image
-            alt="ekiti"
-            top="-716px"
-            left="118px"
-            width="68px"
-            height="131px"
-            position="relative"
-            src="/images/EKITI.svg"
-          />
-          <Image
-            alt="ondo"
-            left="-9px"
-            top="-659px"
-            width="160px"
-            height="134px"
-            position="relative"
-            src="/images/ONDO.svg"
-          />
-          <Image
-            alt="edo"
-            top="-649px"
-            left="-123px"
-            width="159px"
-            height="135px"
-            position="relative"
-            src="/images/EDO.svg"
-          />
-          <Image
-            alt="delta"
-            top="-593px"
-            width="133px"
-            height="150px"
-            left="-264px"
-            position="relative"
-            src="/images/DELTA.svg"
-          />
-          <Image
-            top="-588px"
-            left="-279px"
-            width="62px"
-            alt="anambra"
-            height="79px"
-            position="relative"
-            src="/images/ANAMBRA.svg"
-          />
-          <Image
-            alt="enugu"
-            top="-669px"
-            width="70px"
-            left="-319px"
-            height="200px"
-            position="relative"
-            src="/images/ENUGU.svg"
-          />
-          <Image
-            position="relative"
-            top="-690px"
-            left="-345px"
-            width="69px"
-            height="280px"
-            src="/images/EBONYI.svg"
-            alt="ebonyi"
-          />
-          <Image
-            alt="CRS"
-            top="-658px"
-            left="-390px"
-            width="121px"
-            height="280px"
-            position="relative"
-            src="/images/CROSS-RIVERS.svg"
-          />
-        </Stack>
-        <Stack display="flex" flexDirection="row">
-          <Image
-            alt="ogun"
-            top="-977px"
-            left="179px"
-            width="139px"
-            height="160px"
-            position="relative"
-            src="/images/OGUN.svg"
-          />
-          <Image
-            alt="lagos"
-            top="-946px"
-            left="43px"
-            width="119px"
-            height="162px"
-            position="relative"
-            src="/images/LAGOS.svg"
-          />
-          <Image
-            top="-814px"
-            left="109px"
-            width="104px"
-            alt="bayelsa"
-            height="150px"
-            position="relative"
-            src="/images/BAYELSA.svg"
-          />
-          <Image
-            left="81px"
-            top="-829px"
-            width="98px"
-            alt="rivers"
-            height="152px"
-            position="relative"
-            src="/images/RIVERS.svg"
-          />
-          <Image
-            alt="imo"
-            left="3px"
-            top="-865px"
-            width="57px"
-            height="150px"
-            position="relative"
-            src="/images/IMO.svg"
-          />
-          <Image
-            alt="abia"
-            left="-17px"
-            top="-854px"
-            width="63px"
-            height="150px"
-            position="relative"
-            src="/images/ABIA.svg"
-          />
-          <Image
-            left="-57px"
-            top="-826px"
-            width="67px"
-            height="150px"
-            alt="akwa-ibom"
-            position="relative"
-            src="/images/AKWA-IBOM.svg"
-          />
-        </Stack>
+        <Map />
+        <VStack
+          display="flex"
+          alignItems="end"
+          flexDirection="column"
+          padding="60px 60px 70px 0px"
+          justifyContent="space-between"
+        >
+          <VStack>
+            <Image
+              alt="plus"
+              boxSize="38px"
+              border="2px solid inherit"
+              src="/images/plus.svg"
+              _hover={{
+                border: "1px solid  #64CCFF",
+              }}
+            />
+            <Image
+              alt="minus"
+              width="40px"
+              height="40px"
+              src="/images/minus.svg"
+              _hover={{
+                border: "1px solid  #64CCFF",
+              }}
+            />
+          </VStack>
+          <VStack paddingRight="60px" gap="30px">
+            <HStack gap="12px">
+              <Image
+                alt="apc"
+                width="32px"
+                height="24px"
+                src="/images/blue.svg"
+                border="1px solid blue"
+                _hover={{
+                  width: "32px",
+                  height: "24px",
+                  border: "1px solid #64CCFF ",
+                }}
+              />
+              <Text
+                height="20px"
+                borderBottom="1px solid inherit"
+                _hover={{
+                  borderBottom: "1px solid #64CCFF",
+                }}
+              >
+                APC
+              </Text>
+            </HStack>
+            <HStack gap="12px">
+              <Image
+                alt="lp"
+                width="32px"
+                height="24px"
+                src="/images/green.svg"
+                border="1px solid green"
+                _hover={{
+                  width: "32px",
+                  height: "24px",
+                  border: "1px solid #64CCFF ",
+                }}
+              />
+              <Text
+                height="20px"
+                borderBottom="1px solid inherit"
+                _hover={{
+                  borderBottom: "1px solid #64CCFF",
+                }}
+              >
+                LP
+              </Text>
+            </HStack>
+            <HStack gap="12px">
+              <Image
+                alt="pdp"
+                width="32px"
+                height="24px"
+                src="/images/red.svg"
+                border="1px solid red"
+                _hover={{
+                  width: "32px",
+                  height: "24px",
+                  border: "1px solid #64CCFF ",
+                }}
+              />
+              <Text
+                // bgColor="red"
+                height="20px"
+                borderBottom="1px solid inherit"
+                _hover={{
+                  borderBottom: "1px solid #64CCFF",
+                }}
+              >
+                PDP
+              </Text>
+            </HStack>
+          </VStack>
+        </VStack>
       </Card>
 
       {/* fourth */}
@@ -453,33 +234,106 @@ const BodyContainer = () => {
         flexDirection="row"
         padding="45px 30px"
         borderRadius=" 13px"
+        justifyContent="space-between"
         border=" 1px solid #393C4A"
       >
-        {/* pie chart */}
-        <Card
-          display="flex"
-          color="#ffffff"
-          fontSize="14px"
-          padding="35px 30px"
-          background="#1B1F30"
-          borderRadius=" 13px"
-          flexDirection="column"
-          border="1px solid #272935"
-        >
-          <Text>Pie chart here</Text>
-        </Card>
+        <PieChart />
 
         {/* map */}
         <Card
+          width="510px"
           display="flex"
           color="#ffffff"
           fontSize="14px"
           background="#1B1F30"
           borderRadius=" 13px"
           flexDirection="column"
+          padding="20px 0px 0px 30px"
           border="1px solid #272935"
         >
-          <Text>Map here</Text>
+          {/* <Text
+            height="20px"
+            fontSize="14px"
+            _hover={{
+              borderBottom: "1px solid blue",
+            }}
+          >
+            CANDIDATES BY GEOPOLITICAL ZONES
+          </Text> */}
+          <Stack display="flex" flexDirection="row">
+            <Image src="/images/map.svg" alt="map" />
+
+            <Stack paddingTop="122px" paddingRight="30px">
+              {[
+                {
+                  id: 1,
+                  src: "/images/NE.svg",
+                  alt: "north-east",
+                  region: "North East",
+                },
+                {
+                  id: 2,
+                  src: "/images/NW.svg",
+                  alt: "north-west",
+                  region: "North West",
+                },
+                {
+                  id: 3,
+                  src: "/images/NC.svg",
+                  alt: "north-central",
+                  region: "North Central",
+                },
+                {
+                  id: 4,
+                  src: "/images/SW.svg",
+                  alt: "south-west",
+                  region: "South West",
+                },
+                {
+                  id: 5,
+                  src: "/images/SS.svg",
+                  alt: "south-south",
+                  region: "South South",
+                },
+                {
+                  id: 6,
+                  src: "/images/SE.svg",
+                  alt: "south-est",
+                  region: "South East",
+                },
+              ].map((item) => {
+                return (
+                  <HStack key={item.id} justifyContent="space-between">
+                    <HStack>
+                      <Image
+                        width="22px"
+                        height="17px"
+                        borderRadius="3px"
+                        border="1px solid inherit"
+                        src={item.src}
+                        alt={item.alt}
+                        _hover={{ height: "16px", border: "1px solid blue" }}
+                      />
+                      <Text
+                        height="18px"
+                        fontSize="12px"
+                        _hover={{ borderBottom: "1px solid blue" }}
+                      >
+                        {item.region}
+                      </Text>
+                    </HStack>
+                    <Text
+                      height="18px"
+                      fontSize="12px"
+                      _hover={{ borderBottom: "1px solid blue" }}
+                    >
+                      3,000
+                    </Text>
+                  </HStack>
+                );
+              })}
+            </Stack>
+          </Stack>
         </Card>
 
         {/* data */}
@@ -496,26 +350,77 @@ const BodyContainer = () => {
           border="1px solid #272935"
         >
           <Stack textAlign="start" marginBottom="40px">
-            <Text>TOTAL ELECTED MEMBERS</Text>
-            <Text fontSize="20px" fontWeight="bold">
+            <Text
+              height="20px"
+              borderBottom="1px solid inherit"
+              _hover={{
+                borderBottom: "1px solid #64CCFF",
+              }}
+            >
+              TOTAL ELECTED MEMBERS
+            </Text>
+            <Text
+              fontSize="20px"
+              fontWeight="bold"
+              height="30px"
+              width="65px"
+              borderBottom="1px solid inherit"
+              _hover={{
+                borderBottom: "1px solid #64CCFF",
+              }}
+            >
               10,000
             </Text>
           </Stack>
           <Stack marginBottom="40px">
             <HStack>
-              <Text>MALE</Text>
+              <Text
+                height="20px"
+                borderBottom="1px solid inherit"
+                _hover={{
+                  borderBottom: "1px solid #64CCFF",
+                }}
+              >
+                MALE
+              </Text>
               <Image src="/images/male.svg" alt="male" />
             </HStack>
-            <Text fontSize="20px" fontWeight="bold">
+            <Text
+              fontSize="20px"
+              fontWeight="bold"
+              height="30px"
+              width="55px"
+              borderBottom="1px solid inherit"
+              _hover={{
+                borderBottom: "1px solid #64CCFF",
+              }}
+            >
               9,000
             </Text>
           </Stack>
           <Stack>
             <HStack>
-              <Text>FEMALE</Text>
+              <Text
+                height="20px"
+                borderBottom="1px solid inherit"
+                _hover={{
+                  borderBottom: "1px solid #64CCFF",
+                }}
+              >
+                FEMALE
+              </Text>
               <Image src="/images/female.svg" alt="female" />
             </HStack>{" "}
-            <Text fontSize="20px" fontWeight="bold">
+            <Text
+              fontSize="20px"
+              fontWeight="bold"
+              height="30px"
+              width="55px"
+              borderBottom="1px solid inherit"
+              _hover={{
+                borderBottom: "1px solid #64CCFF",
+              }}
+            >
               1,000
             </Text>
           </Stack>
