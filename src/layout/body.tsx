@@ -1,5 +1,5 @@
 import React from "react";
-import BodyContainer from "../components/bodycontainer";
+import BodyContainer from "../container/bodycontainer";
 
 const Body = () => {
   return (
