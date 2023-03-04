@@ -5,6 +5,7 @@ const SmallMap = () => {
     <Box>
       <Card
         width="510px"
+        height="340px"
         display="flex"
         color="#ffffff"
         fontSize="14px"

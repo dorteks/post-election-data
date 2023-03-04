@@ -5,6 +5,7 @@ const GenderStats = () => {
     <Box>
       <Card
         display="flex"
+        height="340px"
         color="#ffffff"
         fontSize="14px"
         paddingTop="40px"

@@ -12,7 +12,7 @@ import Legend from "./legend";
 import PieChart from "./pie-chart";
 import SmallMap from "./small-map";
 import GenderStats from "./gender-stats";
-import { TEXT } from "./text";
+import { TEXT } from "../components/text";
 
 const BodyContainer = () => {
   return (
