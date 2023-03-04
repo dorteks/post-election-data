@@ -25,6 +25,7 @@ const BodyContainer = () => {
     >
       <HStack paddingBottom="50px" gap="15px">
         <Text
+          height="40px"
           fontSize="30px"
           fontWeight="bold"
           _hover={{ borderBottom: "1px solid blue" }}
@@ -39,9 +40,9 @@ const BodyContainer = () => {
             bgColor: "#242B47",
           }}
         >
-          <TEXT>PRESIDENTIAL </TEXT>
+          <TEXT height="20px">PRESIDENTIAL </TEXT>
           <TEXT> / </TEXT>
-          <TEXT> 2023</TEXT>
+          <TEXT height="20px"> 2023</TEXT>
         </HStack>
       </HStack>
 
