@@ -22,10 +22,10 @@ const Topbar = () => {
       fontSize="14px"
       lineHeight="20px"
       bgColor="#1F2335"
+      fontFamily="Jost"
       fontStyle="normal"
       flexDirection="row"
       alignItems="center"
-      //   fontFamily="Jost"
       padding="42px 122px 42px 90px"
       justifyContent="space-between"
     >

@@ -1,6 +1,6 @@
 import Layout from "./layout";
-import AppProvider from "./app/provider";
 import Body from "./layout/body";
+import AppProvider from "./app/provider";
 
 const App = () => {
   return (
