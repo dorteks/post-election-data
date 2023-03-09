@@ -23,7 +23,7 @@ const BodyContainer = () => {
         <Stack display="flex" flexDirection="column" gap="15px">
           <HStack>
             <Text
-              height="40px"
+              height="20px"
               fontSize="30px"
               fontWeight="bold"
               _hover={{ borderBottom: "1px solid blue" }}
@@ -107,7 +107,7 @@ const BodyContainer = () => {
         <PresidentResultChart />
       </Stack>
 
-      <HStack
+      {/* <HStack
         gap="20px"
         display="flex"
         marginBottom="150px"
@@ -129,7 +129,7 @@ const BodyContainer = () => {
         >
           <HouseResultChart />
         </Stack>
-      </HStack>
+      </HStack> */}
 
       <Text
         fontSize="24px"

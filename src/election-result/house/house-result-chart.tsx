@@ -8,6 +8,7 @@ type Props = {
   party: string;
   votes: number;
   percentage: number;
+  positionArrow: string;
 };
 
 const HouseCandidateCard = (props: Props) => {
@@ -16,8 +17,8 @@ const HouseCandidateCard = (props: Props) => {
       <Image
         boxSize="12px"
         alt="arrow-up"
-        alignSelf="center"
         src="/images/arrow-up.svg"
+        marginLeft={props.positionArrow}
       />
       <Card
         gap="9px"
@@ -59,28 +60,31 @@ const HouseResultChart = () => {
         justifyContent="space-between"
       >
         <HouseCandidateCard
-          src="/images/apc.svg"
           alt="APC"
-          color="#64CCFF"
-          party="All Progressive Congress"
           votes={54}
+          color="#64CCFF"
           percentage={51.3}
+          src="/images/apc.svg"
+          positionArrow={"110px"}
+          party="All Progressive Congress"
         />
         <HouseCandidateCard
-          src="/images/lp.svg"
           alt="LP"
-          color="#0AA83F"
-          party="The Labour Party"
           votes={12}
+          color="#0AA83F"
           percentage={16.3}
+          src="/images/lp.svg"
+          positionArrow={"200px"}
+          party="The Labour Party"
         />
         <HouseCandidateCard
-          src="/images/pdp.svg"
           alt="PDP"
-          color="#D62B3C"
-          party="People Democratic Party"
           votes={36}
+          color="#D62B3C"
           percentage={46}
+          src="/images/pdp.svg"
+          positionArrow={"110px"}
+          party="People Democratic Party"
         />
       </Card>
     </Stack>

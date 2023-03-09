@@ -1,12 +1,12 @@
 import { useMemo } from "react";
-import { Flex } from "@chakra-ui/react";
 import { ResponsiveChoropleth } from "@nivo/geo";
+import { Box, Flex, Text } from "@chakra-ui/react";
 import { nigMapFeatures } from "../lib/map-features";
 
 const data = [
   {
     political_party_name: "Labour Party",
-    id: 1,
+    id: 29,
     country_id: 160,
     name: "ABIA",
     abbr: "ABIA",
@@ -17,7 +17,7 @@ const data = [
   },
   {
     political_party_name: "People's Democratic Party",
-    id: 2,
+    id: 25,
     country_id: 160,
     name: "ADAMAWA",
     abbr: "ADAMAWA",
@@ -28,7 +28,7 @@ const data = [
   },
   {
     political_party_name: "Labour Party",
-    id: 3,
+    id: 4,
     country_id: 160,
     name: "ANAMBRA",
     abbr: "ANAMBRA",
@@ -39,7 +39,7 @@ const data = [
   },
   {
     political_party_name: "Labour Party",
-    id: 4,
+    id: 15,
     country_id: 160,
     name: "CROSS RIVER",
     abbr: "CROSS RIVER",
@@ -61,7 +61,7 @@ const data = [
   },
   {
     political_party_name: "Labour Party",
-    id: 6,
+    id: 11,
     country_id: 160,
     name: "RIVERS",
     abbr: "RIVERS",
@@ -70,50 +70,28 @@ const data = [
     updated_at: "2023-02-22 15:10:46",
     candidate_votes: 323,
   },
-  {
-    political_party_name: "Labour Party",
-    id: 7,
-    country_id: 160,
-    name: "SOKOTO",
-    abbr: "SOKOTO",
-    is_active: 1,
-    created_at: "2023-02-22 15:10:46",
-    updated_at: "2023-02-22 15:10:46",
-    candidate_votes: 323,
-  },
-  {
-    political_party_name: "Labour Party",
-    id: 8,
-    country_id: 160,
-    name: "BORNO",
-    abbr: "BORNO",
-    is_active: 1,
-    created_at: "2023-02-22 15:10:46",
-    updated_at: "2023-02-22 15:10:46",
-    candidate_votes: 323,
-  },
-  {
-    political_party_name: "Labour Party",
-    id: 9,
-    country_id: 160,
-    name: "OSUN",
-    abbr: "OSUN",
-    is_active: 1,
-    created_at: "2023-02-22 15:10:46",
-    updated_at: "2023-02-22 15:10:46",
-    candidate_votes: 323,
-  },
-  {
-    political_party_name: "People's Democratic Party",
-    id: 10,
-    country_id: 160,
-    name: "FEDERAL CAPITAL TERRITORY",
-    abbr: "FCT",
-    is_active: 1,
-    created_at: "2023-02-22 15:10:46",
-    updated_at: "2023-02-22 15:10:46",
-    candidate_votes: 6000,
-  },
+  // {
+  //   political_party_name: "People's Democratic Party",
+  //   id: 1,
+  //   country_id: 160,
+  //   name: "SOKOTO",
+  //   abbr: "SOKOTO",
+  //   is_active: 1,
+  //   created_at: "2023-02-22 15:10:46",
+  //   updated_at: "2023-02-22 15:10:46",
+  //   candidate_votes: 7563,
+  // },
+  // {
+  //   political_party_name: "All Peoples Congress",
+  //   id: 2,
+  //   country_id: 160,
+  //   name: "KANO",
+  //   abbr: "KANO",
+  //   is_active: 1,
+  //   created_at: "2023-02-22 15:10:46",
+  //   updated_at: "2023-02-22 15:10:46",
+  //   candidate_votes: 7563,
+  // },
 ];
 
 const theme = {
@@ -137,15 +115,15 @@ const NigeriaMap = () => {
     const mapData = data?.map((item) => {
       const partyName =
         item?.political_party_name === "People's Democratic Party"
-          ? "APC"
-          : item?.political_party_name === "Labour Party"
           ? "PDP"
-          : "LP";
+          : item?.political_party_name === "Labour Party"
+          ? "LP"
+          : "APC";
       const partyData = {
         id: item?.name,
         leadingParty: partyName,
         votes: item?.candidate_votes,
-        value: partyName === "APC" ? 3 : partyName === "PDP" ? 2 : 1,
+        value: partyName === "PDP" ? 3 : partyName === "LP" ? 2 : 1,
       };
 
       return partyData;
@@ -175,6 +153,78 @@ const NigeriaMap = () => {
         right: 0,
         left: 40,
         bottom: 0,
+      }}
+      label={(feature) => {
+        const d = newData?.find((d) => d?.id === feature?.id);
+        if (!d) return "";
+        return `${feature?.properties?.admin1Name} - ${d?.leadingParty}`;
+      }}
+      // tooltip type is ?
+      tooltip={({ feature }) => {
+        const d = newData.find((d) => d?.id === feature?.id);
+        if (!d) {
+          return "";
+        }
+        return (
+          <Flex
+            top={6}
+            height="auto"
+            color="white"
+            align={"center"}
+            bgColor="#131726"
+            padding="15px 21px"
+            width="max-content"
+            borderRadius={"6px"}
+            position={"absolute"}
+            border="1px solid #212842"
+            justifyContent="space-between"
+            boxShadow="0px 4px 15px rgba(0, 0, 0, 0.15)"
+          >
+            {feature?.data?.value ? (
+              <Flex align={"center"} gap="5px">
+                <Box>
+                  <Flex w="100%" gap="50px" justifyContent={"space-between"}>
+                    <Text
+                      opacity="0.5"
+                      fontSize="12px"
+                      fontWeight="400"
+                      lineHeight="20px"
+                      marginBottom="15px"
+                    >
+                      VOTE COUNT
+                    </Text>
+                    <Text
+                      opacity="0.5"
+                      fontSize="12px"
+                      fontWeight="400"
+                      lineHeight="20px"
+                      marginBottom="15px"
+                    >
+                      SEE FULL LIST
+                    </Text>
+                  </Flex>
+
+                  <Flex w="100%" gap="80px" justifyContent={"space-between"}>
+                    <Box gap="40px" flexDirection="row" display="flex">
+                      <Text>
+                        {d?.leadingParty === "PDP"
+                          ? "Atiku Abubakar"
+                          : d?.leadingParty === "APC"
+                          ? "Bola Ahmed Tinubu"
+                          : "Peter Obi"}
+                      </Text>
+                      <Text>{d?.leadingParty}</Text>
+                    </Box>
+
+                    <Text>{d?.votes}</Text>
+                  </Flex>
+                </Box>
+              </Flex>
+            ) : (
+              <Text color={"black"}>No info yet</Text>
+            )}
+          </Flex>
+        );
       }}
       legends={[
         {

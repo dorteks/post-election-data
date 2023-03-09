@@ -1,6 +1,5 @@
-import React from "react";
-import BodyContainer from "../election-result/bodycontainer";
 // import BodyContainer from "../container/bodycontainer";
+import BodyContainer from "../election-result/bodycontainer";
 
 const Body = () => {
   return (

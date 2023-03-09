@@ -7,6 +7,7 @@ type Props = {
   color: string;
   party: string;
   votes: number;
+  positionArrow: string;
   candidate?: string;
   percentage: number;
 };
@@ -17,8 +18,8 @@ const PresidentialCandidateCard = (props: Props) => {
       <Image
         boxSize="12px"
         alt="arrow-up"
-        alignSelf="center"
         src="/images/arrow-up.svg"
+        marginLeft={props.positionArrow}
       />
       <Card
         gap="9px"
@@ -60,33 +61,36 @@ const PresidentResultChart = () => {
         justifyContent="space-between"
       >
         <PresidentialCandidateCard
-          src="/images/tinubu.svg"
-          alt="tinubu"
-          color="#64CCFF"
-          candidate="Tinubu"
           party="APC"
-          votes={81283786}
-          percentage={51.3}
+          alt="tinubu"
+          votes={2125}
+          color="#64CCFF"
+          percentage={1.5}
+          candidate="Tinubu"
+          positionArrow={"10px"}
+          src="/images/tinubu.svg"
         />
 
         <PresidentialCandidateCard
-          src="/images/peter.svg"
-          alt="peter"
-          color="#0AA83F"
-          candidate="Peter"
           party="LP"
-          votes={60283786}
-          percentage={42}
+          alt="peter"
+          votes={131453}
+          color="#0AA83F"
+          percentage={94}
+          candidate="Peter"
+          positionArrow={"110px"}
+          src="/images/peter.svg"
         />
 
         <PresidentialCandidateCard
-          src="/images/atiku.svg"
           alt="atiku"
-          color="#D62B3C"
-          candidate="Atiku"
           party="PDP"
-          votes={28367886}
-          percentage={7.3}
+          votes={6220}
+          color="#D62B3C"
+          percentage={4.4}
+          candidate="Atiku"
+          positionArrow={"210px"}
+          src="/images/atiku.svg"
         />
       </Stack>
     </Stack>
