@@ -6,20 +6,20 @@ const PresidentialChart = () => {
   const data = [
     {
       full_name: "Peter Obi",
-      candidates_vote: 131453,
+      candidates_vote: 60283786,
       lpImage: "/imgaes/peter.svg",
       political_party_name: "Labour Party",
       candidate_id: "01gsxaa3v52mbr3aspbjn4w9bh",
     },
     {
-      candidates_vote: 6220,
+      candidates_vote: 28367886,
       full_name: "Atiku Abubakar",
       pdpImage: "/imgaes/atiku.svg",
       candidate_id: "01gsxaarzz4gnvqykbb3ryewja",
       political_party_name: "People's Democratic Party",
     },
     {
-      candidates_vote: 2125,
+      candidates_vote: 81283786,
       full_name: "Ahmed Bola Tinubu",
       apcImage: "/imgaes/tinubu.svg",
       candidate_id: "01gsxab585djcfcneefkpten1r",

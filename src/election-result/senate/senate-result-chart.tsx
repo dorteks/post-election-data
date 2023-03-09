@@ -12,38 +12,46 @@ type Props = {
 
 const SenatorialCandidateCard = (props: Props) => {
   return (
-    <Card
-      gap="9px"
-      width="250px"
-      height="auto"
-      padding="8px"
-      display="flex"
-      bgColor="#FFFFFF"
-      flexDirection="row"
-      alignItems="flex-start"
-      boxShadow="0px 4px 15px rgba(0, 0, 0, 0.15) "
-    >
-      <Image src={props.src} alt={props.alt} />
-      <Stack display="flex" flexDirection="column" marginLeft="10px">
-        <Text height="45px" width="120px" color={props.color}>
-          {props.party}
-        </Text>
-        <Text>
-          {props.votes} seats ({props.percentage}%)
-        </Text>
-      </Stack>
-    </Card>
+    <Stack>
+      <Image
+        boxSize="12px"
+        alt="arrow-up"
+        alignSelf="center"
+        src="/images/arrow-up.svg"
+      />
+      <Card
+        gap="9px"
+        width="250px"
+        height="auto"
+        padding="8px"
+        display="flex"
+        bgColor="#FFFFFF"
+        flexDirection="row"
+        alignItems="flex-start"
+        boxShadow="0px 4px 15px rgba(0, 0, 0, 0.15) "
+      >
+        <Image src={props.src} alt={props.alt} />
+        <Stack display="flex" flexDirection="column" marginLeft="10px">
+          <Text height="45px" width="120px" color={props.color}>
+            {props.party}
+          </Text>
+          <Text>
+            {props.votes} seats ({props.percentage}%)
+          </Text>
+        </Stack>
+      </Card>
+    </Stack>
   );
 };
 
 const SenateResultChart = () => {
   return (
-    <Stack height="90px" width="auto">
+    <Stack height="205px" width="auto">
       <Text fontSize="18px" lineHeight="35px">
         SENATE
       </Text>
       <SenateChart />
-      {/* <Card
+      <Card
         display="flex"
         bgColor="inherit"
         flexDirection="row"
@@ -73,7 +81,7 @@ const SenateResultChart = () => {
           votes={36}
           percentage={46}
         />
-      </Card> */}
+      </Card>
     </Stack>
   );
 };

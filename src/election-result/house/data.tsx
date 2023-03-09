@@ -110,7 +110,7 @@ const HouseChart = () => {
                 : data?.lpImage
             }`}
           />
-          <Box marginLeft="8px">
+          <Box marginLeft="10px">
             <Text>{`${
               id === "PDP"
                 ? data?.pdpName

@@ -1,7 +1,7 @@
 import Map from "../container/map";
 import { TEXT } from "../components/text";
 import StateDataTable from "./state-data-table";
-import HouseResultChart from "./housse/house-result-chart";
+import HouseResultChart from "./house/house-result-chart";
 import SenateResultChart from "./senate/senate-result-chart";
 import PresidentResultChart from "./presidential/president-result-chart";
 import { Box, Card, Text, HStack, Stack, Select } from "@chakra-ui/react";
@@ -110,7 +110,6 @@ const BodyContainer = () => {
       <HStack
         gap="20px"
         display="flex"
-        marginTop="60px"
         marginBottom="150px"
         justifyContent="space-between"
       >

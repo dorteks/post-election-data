@@ -13,39 +13,47 @@ type Props = {
 
 const PresidentialCandidateCard = (props: Props) => {
   return (
-    <Card
-      gap="9px"
-      width="250px"
-      height="auto"
-      padding="8px"
-      display="flex"
-      bgColor="#FFFFFF"
-      flexDirection="row"
-      alignItems="flex-start"
-      boxShadow="0px 4px 15px rgba(0, 0, 0, 0.15) "
-    >
-      <Image src={props.src} alt={props.alt} />
-      <Stack display="flex" flexDirection="column">
-        <Text height="15px" color={props.color}>
-          {props.candidate}, {props.party}
-        </Text>
-        <Text>
-          {props.votes} votes ({props.percentage}%){" "}
-        </Text>
-      </Stack>
-    </Card>
+    <Stack>
+      <Image
+        boxSize="12px"
+        alt="arrow-up"
+        alignSelf="center"
+        src="/images/arrow-up.svg"
+      />
+      <Card
+        gap="9px"
+        width="250px"
+        height="auto"
+        padding="8px"
+        display="flex"
+        bgColor="#FFFFFF"
+        flexDirection="row"
+        alignItems="flex-start"
+        boxShadow="0px 4px 15px rgba(0, 0, 0, 0.15) "
+      >
+        <Image src={props.src} alt={props.alt} />
+        <Stack display="flex" flexDirection="column">
+          <Text height="15px" color={props.color}>
+            {props.candidate}, {props.party}
+          </Text>
+          <Text>
+            {props.votes} votes ({props.percentage}%){" "}
+          </Text>
+        </Stack>
+      </Card>
+    </Stack>
   );
 };
 
 const PresidentResultChart = () => {
   return (
-    <Stack height="100px" marginBottom="50px">
+    <Stack height="180px" marginBottom="50px">
       <Text fontSize="18px" lineHeight="35px">
         PRESIDENT
       </Text>
       <PresidentialChart />
 
-      {/* <Stack
+      <Stack
         display="flex"
         bgColor="inherit"
         flexDirection="row"
@@ -77,10 +85,10 @@ const PresidentResultChart = () => {
           color="#D62B3C"
           candidate="Atiku"
           party="PDP"
-          votes={283786}
+          votes={28367886}
           percentage={7.3}
         />
-      </Stack> */}
+      </Stack>
     </Stack>
   );
 };
