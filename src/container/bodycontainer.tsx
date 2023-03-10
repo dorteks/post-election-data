@@ -8,7 +8,6 @@ import {
   Divider,
 } from "@chakra-ui/react";
 import Map from "./map";
-import Legend from "./legend";
 import PieChart from "./pie-chart";
 import SmallMap from "./small-map";
 import GenderStats from "./gender-stats";
@@ -135,7 +134,6 @@ const BodyContainer = () => {
         border=" 1px solid #393C4A"
       >
         <Map />
-        <Legend />
       </Card>
 
       <Card
