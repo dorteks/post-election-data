@@ -120,7 +120,11 @@ const data = [
 
 const StateDataTable = () => {
   return (
-    <HStack justifyContent="space-between" marginBottom="100px">
+    <HStack
+      marginTop="10px"
+      marginBottom="100px"
+      justifyContent="space-between"
+    >
       <Stack>
         <TableContainer width="500px">
           <Table size="sm" variant="unstyled">
