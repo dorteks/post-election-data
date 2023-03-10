@@ -9,7 +9,6 @@ const Footer = () => {
       fontFamily="Jost"
       fontStyle="normal"
       bgColor=" #353949"
-      fontWeight="400px"
       flexDirection="row"
       justifyContent="space-between"
       padding="80px 120px 60px 90px"

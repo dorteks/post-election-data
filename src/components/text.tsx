@@ -1,16 +1,18 @@
 import { Box, Text } from "@chakra-ui/react";
 
 type Props = {
-  children: React.ReactNode;
+  color?: any;
+  height?: any;
   fontsize?: any;
   lineheight?: any;
-  height?: any;
+  children: React.ReactNode;
 };
 
 export const TEXT = (props: Props) => {
   return (
     <Box>
       <Text
+        color={props.color}
         height={props.height}
         fontSize={props.fontsize}
         lineHeight={props.lineheight}
