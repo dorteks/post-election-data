@@ -107,7 +107,7 @@ const BodyContainer = () => {
         <PresidentResultChart />
       </Stack>
 
-      {/* <HStack
+      <HStack
         gap="20px"
         display="flex"
         marginBottom="150px"
@@ -129,7 +129,7 @@ const BodyContainer = () => {
         >
           <HouseResultChart />
         </Stack>
-      </HStack> */}
+      </HStack>
 
       <Text
         fontSize="24px"

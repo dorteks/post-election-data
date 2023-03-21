@@ -63,9 +63,9 @@ const PresidentResultChart = () => {
         <PresidentialCandidateCard
           party="APC"
           alt="tinubu"
-          votes={2125}
+          votes={8794726}
           color="#64CCFF"
-          percentage={1.5}
+          percentage={40.2}
           candidate="Tinubu"
           positionArrow={"10px"}
           src="/images/tinubu.svg"
@@ -74,9 +74,9 @@ const PresidentResultChart = () => {
         <PresidentialCandidateCard
           party="LP"
           alt="peter"
-          votes={131453}
+          votes={6101533}
           color="#0AA83F"
-          percentage={94}
+          percentage={27.9}
           candidate="Peter"
           positionArrow={"110px"}
           src="/images/peter.svg"
@@ -85,9 +85,9 @@ const PresidentResultChart = () => {
         <PresidentialCandidateCard
           alt="atiku"
           party="PDP"
-          votes={6220}
+          votes={6984520}
           color="#D62B3C"
-          percentage={4.4}
+          percentage={31.9}
           candidate="Atiku"
           positionArrow={"210px"}
           src="/images/atiku.svg"
